@@ -9,8 +9,7 @@ public class Mano {
 	}
 	public Mano()
 	{
-		nroCartas=1;
-		Ca[1]=new Carta();
+		nroCartas=0;
 	}
 	public int getNroCartas() {
 		return nroCartas;
