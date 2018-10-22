@@ -1,16 +1,14 @@
 
-public class Mano {
+public class Mesa {
 	private int nroCartas;
 	private Carta Ca[]=new Carta[50];
 	
-	public Mano(int nroCartas, Carta[] ca) {
+	public Mesa(int nroCartas, Carta[] ca) {
 		this.nroCartas = nroCartas;
 		Ca = ca;
 	}
-	public Mano()
-	{
-		nroCartas=1;
-		Ca[1]=new Carta();
+	public Mesa() {
+		nroCartas = 0;
 	}
 	public int getNroCartas() {
 		return nroCartas;
@@ -24,5 +22,4 @@ public class Mano {
 	public void setCa(Carta[] ca) {
 		Ca = ca;
 	}
-	
 }
