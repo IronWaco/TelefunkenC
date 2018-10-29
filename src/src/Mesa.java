@@ -1,3 +1,5 @@
+package src;
+
 
 public class Mesa {
 	private int nroCartas;

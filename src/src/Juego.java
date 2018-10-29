@@ -1,4 +1,4 @@
-
+package src;
 public class Juego {
 	private int numJugadores;
 	private Jugador ju[]=new  Jugador[10];

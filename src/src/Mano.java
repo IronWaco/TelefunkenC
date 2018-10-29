@@ -1,14 +1,17 @@
+package src;
 
-public class Mazo {
+
+public class Mano {
 	private int nroCartas;
-	private Carta Ca[]=new Carta[109];
-	public Mazo(int nroCartas, Carta[] ca) {
+	private Carta Ca[]=new Carta[50];
+	
+	public Mano(int nroCartas, Carta[] ca) {
 		this.nroCartas = nroCartas;
 		Ca = ca;
 	}
-	public Mazo() {
-		nroCartas = 1;
-		Ca[1] = new Carta();
+	public Mano()
+	{
+		nroCartas=0;
 	}
 	public int getNroCartas() {
 		return nroCartas;
@@ -22,5 +25,5 @@ public class Mazo {
 	public void setCa(Carta[] ca) {
 		Ca = ca;
 	}
-
+	
 }
