@@ -116,7 +116,6 @@ public class Mazo {
 		Ca[106] = new Carta("Joker","n.a.",22);
 		Ca[107] = new Carta("Joker","n.a.",22);
 		Ca[108] = new Carta("Joker","n.a.",22);
-		
 	}
 	public int getNroCartas() {
 		return nroCartas;
