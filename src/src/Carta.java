@@ -40,6 +40,9 @@ public class Carta {
 	public void setValor(int valor) {
 		this.valor = valor;
 	}
-	
+	public void mostrar()
+	{
+		System.out.println(nombre+" "+palo);
+	}
 
 }

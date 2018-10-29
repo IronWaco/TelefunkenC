@@ -7,7 +7,7 @@ public class Mazo {
 		Ca = ca;
 	}
 	public Mazo() {
-		nroCartas = 109;
+		nroCartas = 108;
 		Ca[1] = new Carta("as","espadas",11);
 		Ca[2] = new Carta("2","espadas",2);
 		Ca[3] = new Carta("3","espadas",3);
@@ -116,6 +116,7 @@ public class Mazo {
 		Ca[106] = new Carta("Joker","n.a.",22);
 		Ca[107] = new Carta("Joker","n.a.",22);
 		Ca[108] = new Carta("Joker","n.a.",22);
+		
 	}
 	public int getNroCartas() {
 		return nroCartas;
@@ -129,6 +130,36 @@ public class Mazo {
 	public void setCa(Carta[] ca) {
 		Ca = ca;
 	}
-
+	public Carta getCai(int i) {
+		return Ca[i];
+	}
+	public void setCai(Carta ca,int i) {
+		Ca[i] = ca;
+	}
+	public void mostrar()
+	{
+		System.out.println("nro"+nroCartas);
+		for(int i=1;i<=nroCartas;i++)
+		{
+			Ca[i].mostrar();
+		}
+	}
 	
+	public Mazo desordenar()
+	{
+		int c;
+		Mazo a=new Mazo();
+		for(int i=1;i<109;i++)
+		{
+			c=(int) Math.floor(Math.random()*(nroCartas-1)+1);	
+			a.setCai(Ca[c], i);
+			for(int j=c;j<nroCartas-1;j++)
+			{
+				Ca[j]=Ca[j+1];
+			}
+			Ca[nroCartas]=null;
+			nroCartas--;
+		}
+		return a;
+	}
 }
