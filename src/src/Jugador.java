@@ -57,7 +57,10 @@ public class Jugador
 	public void setM(Mano m) {
 		this.m = m;
 	}
-	
+	public void repartir(){
+ 		m.repartir();
+ 		
+ 	}
 	
 
 }

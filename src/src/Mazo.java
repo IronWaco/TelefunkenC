@@ -162,4 +162,19 @@ public class Mazo {
 		}
 		return a;
 	}
+	//Rossie
+	 	public void recorrer11(){
+	 		int x=1;
+	 		for(int i=12;i<nroCartas;i++){
+	 			if(x<=11){
+	 				Ca[x]=Ca[i];
+	 				x++;
+	 			}
+	 			
+	 			
+	 		}
+	 		
+	 		
+	 		
+	 	}
 }

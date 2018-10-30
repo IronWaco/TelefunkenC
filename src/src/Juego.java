@@ -35,5 +35,9 @@ public class Juego {
 		this.ronda = ronda;
 	}
 	
-	
+	public void repartir(){
+ 		for(int i=0;i<numJugadores;i++){
+ 			ju[i].repartir();
+ 		}
+	}
 }

@@ -25,5 +25,22 @@ public class Mano {
 	public void setCa(Carta[] ca) {
 		Ca = ca;
 	}
+	public Carta agarrarcarta(int i){
+		
+		return Ca[i];
+		
+	}	
 	
+	public void repartir()
+	{
+		Mazo a=new Mazo();
+		for(int i=1;i<11;i++)
+		{
+				
+			Ca[i]=a.getCai(i);
+			nroCartas++;
+		}
+		a.recorrer11();		
+	}
+
 }
