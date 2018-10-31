@@ -83,4 +83,16 @@ public class Mano {
 			Ca[i]=Ca[i+1];
 		nroCartas--;
 	}
+	public void quitar(Carta sa) {
+		int x;
+		for(int i = 1; i <= nroCartas; i++) {
+			if(sa.getNombre().equals(Ca[i].getNombre()) && sa.getPalo().equals(Ca[i].getPalo())) {
+				x = i;
+				for(int j = x; j < nroCartas; j++) {
+					Ca[j] = Ca[j+1];
+				}nroCartas--; break;
+			}
+		}
+	}
+
 }
