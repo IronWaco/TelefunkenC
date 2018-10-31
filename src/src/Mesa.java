@@ -80,4 +80,13 @@ public class Mesa {
          nroCartas=nroCartas+1;
          Ca[nroCartas]=x;
      }
+     public void agregar(Carta c) {
+ 		nroCartas++;
+ 		Ca[nroCartas] = c;
+ 	}
+     public void mostrar() {
+ 		for(int i = 1; i <= nroCartas; i++) {
+ 			Ca[i].mostrar();
+ 		}
+ 	}
 }

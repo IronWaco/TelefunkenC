@@ -34,7 +34,9 @@ public class Mano {
 		return Ca[i];
 		
 	}	
-	
+	public Carta getCai(int i) {
+		return Ca[i];
+	}
 	public void repartir(Mazo a)
 	{
 		for(int i=1;i<=11;i++)
@@ -62,10 +64,9 @@ public class Mano {
             }
         }
 	}
-	public void mostrar()
-	{
-		for(int i=1;i<=nroCartas;i++)
-		{
+	public void mostrar() {
+		for(int i = 1; i <= nroCartas; i++) {
+			System.out.print(i + " : ");
 			Ca[i].mostrar();
 		}
 	}
