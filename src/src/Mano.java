@@ -70,4 +70,17 @@ public class Mano {
 			Ca[i].mostrar();
 		}
 	}
+	public void tomarC(Mazo a)
+	{
+		nroCartas++;
+		Ca[nroCartas]=a.getCai(1);
+		a.tomarC();
+		
+	}
+	public void eliminar(int n)
+	{
+		for(int i=n;i<nroCartas;i++)
+			Ca[i]=Ca[i+1];
+		nroCartas--;
+	}
 }

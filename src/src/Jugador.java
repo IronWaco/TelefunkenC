@@ -120,6 +120,13 @@ public class Jugador
 		        	}
 		        }  
 		}
-
+	 public void descartar(Mazo a)
+	 {
+		 Scanner sc=new Scanner(System.in);
+		 System.out.print("ingresar la carta a eliminar");
+		 int n=sc.nextInt();
+		 a.aumentar(m.getCai(n));
+		 m.eliminar(n);
+	 }
 
 }

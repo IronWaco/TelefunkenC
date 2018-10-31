@@ -180,4 +180,17 @@ public class Mazo {
 	 			}
 	 		}
 	 	}
+	 	public void tomarC()
+	 	{
+	 		for(int i=1;i<nroCartas;i++)
+	 			Ca[i]=Ca[i+1];
+	 		nroCartas--;
+	 	}
+	 	public void aumentar(Carta a)
+	 	{
+	 		Ca[nroCartas+1]=new Carta();
+	 		for(int i=nroCartas;i>1;i--)
+	 			Ca[nroCartas+1]=Ca[nroCartas];
+	 		Ca[1]=a;
+	 	}
 }
