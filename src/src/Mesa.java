@@ -1,5 +1,6 @@
 package src;
 
+import java.util.Scanner;
 
 public class Mesa {
 	private int nroCartas;
@@ -9,6 +10,7 @@ public class Mesa {
 		this.nroCartas = nroCartas;
 		Ca = ca;
 	}
+	
 	public Mesa() {
 		nroCartas = 0;
 	}
@@ -24,4 +26,58 @@ public class Mesa {
 	public void setCa(Carta[] ca) {
 		Ca = ca;
 	}
+	 public boolean ver_sopar() {
+         int nroCartasx, nombrex, nombrey, nombrez;
+         nroCartasx=nroCartas/3;
+         for(int j=0; j<=nroCartasx; j=j+3)
+         {
+             if(Ca[j].getNombre()==Ca[j+1].getNombre() && Ca[j+1].getNombre()==Ca[j+2].getNombre())
+             {
+                 return true;
+             }
+             else
+             {
+                 if(Ca[j].getNombre().equals("as") && Ca[j+1].getNombre().equals("2") && Ca[j+2].getNombre().equals("3") || Ca[j].getNombre().equals("Jack") && Ca[j+1].getNombre().equals("Queen") && Ca[j+2].getNombre().equals("king"))
+                 {
+                     return true;
+                 }
+                 else
+                 {
+                     nombrex=Integer.parseInt(Ca[j].getNombre());
+                     nombrey=Integer.parseInt(Ca[j+1].getNombre());
+                     nombrez=Integer.parseInt(Ca[j+2].getNombre());
+                     if(nombrex<nombrey && nombrey<nombrez)
+                     {
+                         return true;
+                     }
+                     else
+                     {
+                         return false;
+                     }
+                 } 
+             }
+         }
+         return false;
+     }
+     
+     public boolean verificar_sopar() {
+         Scanner lee = new Scanner(System.in);
+         System.out.println("Tiene la posibilidad de sopar sus cartas");
+         System.out.println("Quiere sopar alguna carta?");
+         System.out.println("Escriba 'si' para sopar o 'no' para seguir jugando");
+         String a=lee.next();
+         if(a.equals("si"))
+         {
+             return true;
+         }
+         else
+         {
+             return false;
+         }
+     }
+     
+     public void sopar(Carta x) {
+         nroCartas=nroCartas+1;
+         Ca[nroCartas]=x;
+     }
 }

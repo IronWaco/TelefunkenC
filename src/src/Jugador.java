@@ -7,7 +7,8 @@ public class Jugador
 	private int puntuacion;
 	private int compras;
 	private int orden;
-	private Mano m=new Mano();
+	private Mano m;
+	boolean BR;
 	
 	public Jugador(String nombre, int puntuacion, int compras, int orden, Mano m)
 	{
@@ -16,6 +17,7 @@ public class Jugador
 		this.compras = compras;
 		this.orden = orden;
 		this.m = m;
+		BR=false;
 	}
 
 	public String getNombre() {
@@ -57,10 +59,14 @@ public class Jugador
 	public void setM(Mano m) {
 		this.m = m;
 	}
-	public void repartir(){
- 		m.repartir();
- 		
+	public void repartir(Mazo a){
+ 		m.repartir(a);
  	}
-	
+	 public void sopar() {
+         if(m.getNroCartas()<11)
+         {
+             m.sopar();
+         }
+     }
 
 }

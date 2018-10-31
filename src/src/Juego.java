@@ -1,14 +1,22 @@
 package src;
+
+import java.util.Scanner;
+
 public class Juego {
 	private int numJugadores;
 	private Jugador ju[]=new  Jugador[10];
 	private int ronda;
+	Mazo Nuevo=new Mazo();
+	Mazo Descarte=new Mazo(0);
+	Mesa Me=new Mesa();
 	
 	public Juego(int numJugadores, Jugador[] ju, int ronda) {
-		super();
 		this.numJugadores = numJugadores;
 		this.ju = ju;
 		this.ronda = ronda;
+	}
+
+	public Juego() {
 	}
 
 	public int getNumJugadores() {
@@ -37,7 +45,63 @@ public class Juego {
 	
 	public void repartir(){
  		for(int i=0;i<numJugadores;i++){
- 			ju[i].repartir();
+ 			ju[i].repartir(Nuevo);
  		}
+	}
+	public void sopar() {
+        for(int i=0; i<numJugadores; i++)
+        {
+            ju[i].sopar();
+        }
+    }
+	public void empezar()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("numero de jugadores:");
+		numJugadores=sc.nextInt();
+		String nombre;
+		Nuevo=Nuevo.desordenar();
+		for(int i=1;i<=numJugadores;i++)
+		{
+			System.out.print("nombre Jugador:");
+			nombre=sc.next();
+			ju[i]=new Jugador(nombre,0,7,i,new Mano());
+			ju[i].repartir(Nuevo);
+		}
+	}
+	public void ronda1()
+	{
+		
+		Scanner sc=new Scanner(System.in);
+		int orden=1,op;
+		while(ju[orden].getM().getNroCartas()>0)
+		{
+			System.out.println(ju[orden].getNombre());
+			ju[orden].getM().mostrar();
+			System.out.println("que desea hacer");
+			System.out.println("1.bajar trica");
+			System.out.println("2.bajar escalera");
+			System.out.println("3.sopar");
+			System.out.println("4.Terminar turno");
+			op=sc.nextInt();
+			switch(op)
+			{
+			case 1:
+				//ju[orden].bajarT(Me);
+				break;
+			case 2:
+				//ju[orden].bajarE(Me);
+				break;
+			case 3:
+				//ju[orden].sopar();
+				break;
+			case 4:
+				orden =orden+1;
+				if(orden>numJugadores)
+				{
+					orden=1;
+				}
+			}
+		}
 	}
 }

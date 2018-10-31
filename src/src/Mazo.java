@@ -6,6 +6,14 @@ public class Mazo {
 		this.nroCartas = nroCartas;
 		Ca = ca;
 	}
+	public Mazo(int nroCartas) {
+		this.nroCartas = nroCartas;
+		Carta ca[]=new Carta[109];
+		for(int i=1;i<109;i++)
+		{
+			ca[i]=new Carta();
+		}
+	}
 	public Mazo() {
 		nroCartas = 108;
 		Ca[1] = new Carta("as","espadas",11);
@@ -170,11 +178,6 @@ public class Mazo {
 	 				Ca[x]=Ca[i];
 	 				x++;
 	 			}
-	 			
-	 			
 	 		}
-	 		
-	 		
-	 		
 	 	}
 }
