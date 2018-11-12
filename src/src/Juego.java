@@ -73,11 +73,15 @@ public class Juego {
 	{
 		
 		Scanner sc=new Scanner(System.in);
-		int orden=1,op;
+		int orden=1,op, tu=0;
 		while(ju[orden].getM().getNroCartas()>0)
 		{
 			System.out.println(ju[orden].getNombre());
-			ju[orden].getM().tomarC(Nuevo);
+			if(tu==0)
+			{
+				ju[orden].getM().tomarC(Nuevo);
+				tu=tu+1;
+			}
 			ju[orden].getM().mostrar();
 			System.out.println("que desea hacer");
 			System.out.println("1.bajar");
