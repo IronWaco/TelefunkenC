@@ -80,7 +80,7 @@ public void bajar(Mesa me){
 			z = in.nextInt(); 
 			if(z != 0) {
 				e++;
-				v[e] = m.getCa(z);
+				v[e] = m.getCai(z);
 			} else {
 				break;
 			}

@@ -101,6 +101,7 @@ public class Juego {
 				ju[orden].sopar();
 				break;
 			case 4:
+				tu=0;
 				ju[orden].descartar(Descarte);
 				orden =orden+1;
 				if(orden>numJugadores)
