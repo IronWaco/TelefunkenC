@@ -60,6 +60,15 @@ public class Jugador
 	public void setM(Mano m) {
 		this.m = m;
 	}
+	
+	public boolean isBR() {
+		return BR;
+	}
+
+	public void setBR(boolean bR) {
+		BR = bR;
+	}
+
 	public void repartir(Mazo a){
  		m.repartir(a);
  	}
@@ -121,6 +130,36 @@ public void bajar(Mesa me){
 	        		m.quitar(v[i]);
 	        	}
 	        }  
+	}
+	public void primera(Mesa me)
+	{
+		Scanner in = new Scanner(System.in);
+		Boolean b = true; Carta v[] = new Carta[7]; int e = 0,z;
+		m.mostrar();
+		System.out.println("¿que cartas desea bajar?(elija numero)");
+		System.out.println("ingrese 0 para terminar");
+		for(int i = 1; i <= m.getNroCartas(); i++) {
+			z = in.nextInt(); 
+			if(z != 0) {
+				e++;
+				v[e] = m.getCai(z);
+			} else {
+				break;
+			}
+		}
+		int g; Carta aux = new Carta();
+		for(int i = 2; i <= e; i++) {
+			if(v[i].getValor() != v[1].getValor()) {
+				System.out.println("error"); b = false; break;
+			}
+		}
+		if(b == true) {
+	        	for(int i = 1; i <= e; i++) {
+	        		me.agregar(v[i]);
+	        		m.quitar(v[i]);
+	        		BR=true;
+	        	}
+	        }	
 	}
 	 public void descartar(Mazo a)
 	 {

@@ -83,33 +83,63 @@ public class Juego {
 				tu=tu+1;
 			}
 			ju[orden].getM().mostrar();
-			System.out.println("que desea hacer");
-			System.out.println("1.bajar");
-			System.out.println("2.mortrar mesa");
-			System.out.println("3.sopar");
-			System.out.println("4.Terminar turno");
-			op=sc.nextInt();
-			switch(op)
+			if(ju[orden].isBR())
 			{
-			case 1:
-				ju[orden].bajar(Me);
-				break;
-			case 2:
-				Me.mostrar();
-				break;
-			case 3:
-				ju[orden].sopar();
-				break;
-			case 4:
-				tu=0;
-				ju[orden].descartar(Descarte);
-				orden =orden+1;
-				if(orden>numJugadores)
+				System.out.println("que desea hacer");
+				System.out.println("1.bajar");
+				System.out.println("2.mortrar mesa");
+				System.out.println("3.sopar");
+				System.out.println("4.Terminar turno");
+				op=sc.nextInt();
+				switch(op)
 				{
-					orden=1;
+				case 1:
+					ju[orden].primera(Me);;
+					break;
+				case 2:
+					Me.mostrar();
+					break;
+				case 3:
+					ju[orden].sopar();
+					break;
+				case 4:
+					tu=0;
+					ju[orden].descartar(Descarte);
+					orden =orden+1;
+					if(orden>numJugadores)
+					{
+						orden=1;
+					}
+					break;
 				}
-				break;
 			}
+			else
+			{
+				System.out.println("debe bajar una trica");
+				System.out.println("1.bajar");
+				System.out.println("2.mortrar mesa");
+				System.out.println("3.Terminar turno");
+				op=sc.nextInt();
+				switch(op)
+				{
+				case 1:
+					ju[orden].bajar(Me);
+					break;
+				case 2:
+					Me.mostrar();
+					break;
+				case 3:
+					tu=0;
+					ju[orden].descartar(Descarte);
+					orden =orden+1;
+					if(orden>numJugadores)
+					{
+						orden=1;
+					}
+					break;
+				}
+			}
+			
 		}
 	}
 }
