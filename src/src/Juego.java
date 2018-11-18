@@ -142,4 +142,11 @@ public class Juego {
 			
 		}
 	}
+	public void contar()
+	{
+		for(int i=1;i<=numJugadores;i++)
+		{
+			ju[i].contar();
+		}
+	}
 }

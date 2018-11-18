@@ -169,5 +169,14 @@ public void bajar(Mesa me){
 		 a.aumentar(m.getCai(n));
 		 m.eliminar(n);
 	 }
+	 public void contar(){
+		 while(m.getNroCartas()>0){
+			 puntuacion=m.getCai(1).getValor()+ puntuacion;
+			 m.eliminar(1);
+			 
+		 }
+		 
+	 }
+	 
 
 }

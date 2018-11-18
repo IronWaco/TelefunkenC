@@ -6,6 +6,7 @@ public class Main {
 		Juego J=new Juego();
 		J.empezar();
 		J.ronda1();
+		J.contar();
 	}
 
 }
