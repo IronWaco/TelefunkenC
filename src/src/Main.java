@@ -8,6 +8,9 @@ public class Main {
 		J.ronda1();
 		J.contar();
 		J.mostrarPun();
+		J.ronda2();
+		J.contar();
+		J.mostrarPun();
 	}
 
 }

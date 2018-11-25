@@ -184,6 +184,13 @@ public class Juego {
 
 		Scanner sc=new Scanner(System.in);
 		int orden=1,op, tu=0,co;
+		Nuevo.desordenar();
+		for(int i=1;i<=numJugadores;i++)
+		{
+			ju[i].repartir(Nuevo);
+		}
+		Descarte.aumentar(Nuevo.getCai(1));
+		Nuevo.tomarC();
 		while(ju[orden].getM().getNroCartas()>0)
 		{
 			System.out.println(ju[orden].getNombre());
@@ -250,7 +257,8 @@ public class Juego {
 				switch(op)
 				{
 				case 1:
-					ju[orden].bajar(Me);
+					ju[orden].primera(Me);
+					ju[orden].trica(Me);
 					break;
 				case 2:
 					Me.mostrar();

@@ -262,6 +262,40 @@ public class Jugador
 			        }
 		
 			}
+		 public void trica(Mesa me)
+		 {
+			 Scanner in = new Scanner(System.in);
+			 BR=false;
+				Boolean b = true; Carta v[] = new Carta[7]; int e = 0,z;
+				m.mostrar();
+				System.out.println("¿que cartas desea bajar?(elija numero)");
+				System.out.println("ingrese 0 para terminar");
+				for(int i = 1; i <= m.getNroCartas(); i++) {
+					z = in.nextInt(); 
+					if(z != 0) {
+						e++;
+						v[e] = m.getCai(z);
+					} else {
+						break;
+					}
+				}
+				int g; Carta aux = new Carta();
+				for(int i = 1; i <= e; i++) {
+					for(int j=i+1;j<=e;j++)
+					{
+						if(v[i].getValor() != v[j].getValor()) {
+							System.out.println("error"); b = false; break;
+						}
+					}
+				}
+				if(b == true) {
+			        	for(int i = 1; i <= e; i++) {
+			        		me.agregar(v[i],i,e);
+			        		m.quitar(v[i]);
+			        		BR=true;
+			        	}
+			        }
+		 }
 		 public void ordenar()
 			{
 				m.ordenar(m.getCa(),m.getNroCartas() );
