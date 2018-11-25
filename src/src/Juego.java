@@ -257,28 +257,34 @@ public class Juego {
 					break;
 				case 3:
 					tu=0;
-					ju[orden].descartar(Descarte);
-					Descarte.getCai(1).mostrar();;
-					System.out.print("Algun jugador comprara la carta?:");
-					System.out.println("0.Ninguno");
-					for(int i=1;i<=numJugadores;i++)
-						System.out.println(i+"."+ju[i].getNombre());
-					co=sc.nextInt();
-					if(co!=0)
+					if(ju[orden].getM().getNroCartas()>=1)
 					{
-						if(ju[orden].getCompras()!=7){
-							ju[co].setCompras(ju[co].getCompras()+1);
-							ju[co].agregar(Descarte.sacar());
-							ju[co].agregar(Nuevo.tomarCarta());
+						ju[orden].descartar(Descarte);
+						Descarte.getCai(1).mostrar();;
+						System.out.print("Algun jugador comprara la carta?:");
+						System.out.println("0.Ninguno");
+						for(int i=1;i<=numJugadores;i++)
+							System.out.println(i+"."+ju[i].getNombre());
+						co=sc.nextInt();
+						if(co!=0)
+						{
+							if(ju[orden].getCompras()!=7){
+								ju[co].setCompras(ju[co].getCompras()+1);
+								ju[co].agregar(Descarte.sacar());
+								ju[co].agregar(Nuevo.tomarCarta());
+							}
+							 else{
+								 System.out.println("Excedio el número de compras");				 
+							 }
 						}
-						 else{
-							 System.out.println("Excedio el número de compras");				 
-						 }
-					}
-					orden =orden+1;
-					if(orden>numJugadores)
-					{
-						orden=1;
+						if(ju[orden].getM().getNroCartas()>=1)
+						{
+							orden =orden+1;
+							if(orden>numJugadores)
+							{
+								orden=1;
+							}
+						}
 					}
 					break;
 				}
