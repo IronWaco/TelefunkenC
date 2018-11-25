@@ -46,24 +46,33 @@ public class Mano {
 		}
 		a.recorrer11();		
 	}
-	public void sopar() {
+	public void sopar(Mesa me) {
         Scanner lee = new Scanner(System.in);
         int i;
-        if(Me.ver_sopar()==true)
+        if(me.ver_sopar2()==true)
         {
-            if(Me.verificar_sopar()==true)
+            if(me.verificar_sopar()==true)
             {
                 System.out.println("Ingrese la posicion de la carta que quiere sopar");
                 i=lee.nextInt();
-                Me.sopar(Ca[i]);
+                me.sopar(Ca[i]);
                 for(int j=i+1; j<=nroCartas; j++)
                 {
                     Ca[j-1]=Ca[j];
                 }
                 nroCartas=nroCartas-1;
             }
+            else
+            {
+                System.out.println("No se puede sopar x2");
+            }
         }
-	}
+        else
+        {
+            System.out.println("No tiene la posibilidad de sopar ninguna carta");
+        }
+}
+    
 	public void mostrar() {
 		for(int i = 1; i <= nroCartas; i++) {
 			System.out.print(i + " : ");
@@ -94,5 +103,46 @@ public class Mano {
 			}
 		}
 	}
+	public boolean verpalo(Carta c[],int e) {
+		Boolean b = true;
+		String s = c[1].getPalo();
+		for(int i = 2; i <= e; i++) {
+			if(!c[i].getPalo().equals(s) && !c[i].getPalo().equals("n.a.")) {
+				b = false; break;
+			}
+		}
+		return b;
+	}
+	
+	public boolean verescalera(Carta v[],int e) {
+		int g = v[1].getValor();  Boolean b = true;
+		for(int i = 2; i <= e; i++) {
+			if(v[i].getValor() != g+1) {
+				System.out.println("error"); b = false;
+				break;
+			} else {
+				g = v[i].getValor();
+			}
+		}
+		return b;
+	}
 
+	public void ordenar(Carta v[],int e) {
+		int g=0; Carta aux = new Carta();
+		for (int i = 1; i <= e; i++) {
+			for (int j = i+1; j <= e; j++) {
+				if (v[i].getValor() < v[j].getValor()) {
+					aux = v[i];
+					v[i] = v[j];
+					v[j] = aux;
+				}
+			}
+		}
+	}
+	public void añadir(Carta c){
+		nroCartas++;
+		Ca[nroCartas]=c;
+		
+	}	
+		
 }
