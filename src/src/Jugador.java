@@ -108,6 +108,7 @@ public class Jugador
 					if(esc == true) {
 						if(w > 0) {
 							if(w == 1) {
+								
 								for(int i = 2; i < e; i++) {
 									if(v[i].getValor()-v[i-1].getValor() != 1){
 										br = false;

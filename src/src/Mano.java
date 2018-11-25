@@ -131,7 +131,7 @@ public class Mano {
 		int g=0; Carta aux = new Carta();
 		for (int i = 1; i <= e; i++) {
 			for (int j = i+1; j <= e; j++) {
-				if (v[i].getValor() < v[j].getValor()) {
+				if (v[i].getValor() > v[j].getValor()) {
 					aux = v[i];
 					v[i] = v[j];
 					v[j] = aux;

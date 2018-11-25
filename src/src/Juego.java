@@ -68,6 +68,8 @@ public class Juego {
 			ju[i]=new Jugador(nombre,0,0,i,new Mano());
 			ju[i].repartir(Nuevo);
 		}
+		Descarte.aumentar(Nuevo.getCai(1));
+		Nuevo.tomarC();
 	}
 	public void ronda1()
 	{
