@@ -299,4 +299,11 @@ public class Juego {
 			ju[i].contar();
 		}
 	}
+	public void mostrarPun()
+	{
+		for(int i=1;i<=numJugadores;i++)
+		{
+			System.out.println("jugador:"+ju[i].getNombre()+" Puntuacion:"+ju[i].getPuntuacion());
+		}
+	}
 }

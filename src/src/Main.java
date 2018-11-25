@@ -7,6 +7,7 @@ public class Main {
 		J.empezar();
 		J.ronda1();
 		J.contar();
+		J.mostrarPun();
 	}
 
 }
