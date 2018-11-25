@@ -279,11 +279,13 @@ public class Juego {
 						}
 						if(ju[orden].getM().getNroCartas()>=1)
 						{
+							
 							orden =orden+1;
 							if(orden>numJugadores)
 							{
 								orden=1;
 							}
+							break;
 						}
 					}
 					break;
