@@ -245,9 +245,12 @@ public class Jugador
 					}
 				}
 				int g; Carta aux = new Carta();
-				for(int i = 2; i <= e; i++) {
-					if(v[i].getValor() != v[1].getValor()) {
-						System.out.println("error"); b = false; break;
+				for(int i = 1; i <= e; i++) {
+					for(int j=i+1;j<=e;j++)
+					{
+						if(v[i].getValor() != v[j].getValor() || v[i].getPalo().compareTo(v[j].getPalo())==0) {
+							System.out.println("error"); b = false; break;
+						}
 					}
 				}
 				if(b == true) {
