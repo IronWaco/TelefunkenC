@@ -89,4 +89,12 @@ public class Mesa {
  			Ca[i].mostrar();
  		}
  	}
+     //Rossie3
+     public void tomarCarta(){
+    		for(int i=1;i<nroCartas;i++)
+	 			Ca[i]=Ca[i+1];
+	 		nroCartas--;
+    	 nroCartas--;
+    	 
+     }
 }

@@ -177,6 +177,11 @@ public void bajar(Mesa me){
 		 }
 		 
 	 }
-	 
+	 //Rossie 3
+	 public void agregar(Carta c){
+		 m[m.nro]
+		 
+		 
+	 }
 
 }

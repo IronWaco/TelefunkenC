@@ -87,7 +87,7 @@ public class Juego {
 			{
 				System.out.println("que desea hacer");
 				System.out.println("1.bajar");
-				System.out.println("2.mortrar mesa");
+				System.out.println("2.mostrar mesa");
 				System.out.println("3.sopar");
 				System.out.println("4.Terminar turno");
 				op=sc.nextInt();
@@ -149,4 +149,19 @@ public class Juego {
 			ju[i].contar();
 		}
 	}
+	 //Rossie 3
+	 public void compras(){
+		 if(compras!=7){
+			 ju.setCompras()==ju.getCompras();
+			ju.Descarte.
+			 Descarte.tomarC();
+			 
+				 
+			 
+		 }
+		 else{
+			 System.out.println("Excedio el número de compras");
+			 
+		 }
+	 }
 }
