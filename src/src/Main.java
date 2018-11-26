@@ -7,6 +7,10 @@ public class Main {
 		J.empezar();
 		J.ronda1();
 		J.contar();
+		J.mostrarPun();
+		J.ronda2();
+		J.contar();
+		J.mostrarPun();
 	}
 
 }
