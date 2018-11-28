@@ -30,8 +30,8 @@ public void listar() throws IOException {
 	}
 	System.out.println("************ FIN LISTAR ************");
 }
-public void adicionar() throws IOException {
-	Jugador jug = new Jugador();
+public void adicionar(Jugador jug) throws IOException {
+	//Jugador jug = new Jugador();
 	//jug.leer();
 	
 	ObjectOutputStream oos = null;

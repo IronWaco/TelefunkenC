@@ -1,5 +1,6 @@
 package src;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Juego {
@@ -316,4 +317,13 @@ public class Juego {
 			System.out.println("jugador:"+ju[i].getNombre()+" Puntuacion:"+ju[i].getPuntuacion());
 		}
 	}
+	public void Guardar() throws IOException
+	{
+		ArchiGanador A=new ArchiGanador("c:\nom.dat");
+		for(int i=1;i<=numJugadores;i++)
+			A.adicionar(ju[i]);
+		A.ordenar();
+		A.listar();
+	}
+	
 }

@@ -53,8 +53,11 @@ public class Mano {
         {
             if(me.verificar_sopar()==true)
             {
-                System.out.println("Ingrese la posicion de la carta que quiere sopar");
-                i=lee.nextInt();
+               
+                do{
+                	 System.out.println("Ingrese la posicion de la carta que quiere sopar");
+                     i=lee.nextInt();	
+                }while(i<=0 && i>nroCartas);
                 me.sopar(Ca[i]);
                 for(int j=i+1; j<=nroCartas; j++)
                 {
