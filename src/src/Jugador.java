@@ -20,7 +20,11 @@ public class Jugador
 			this.m = m;
 			BR=false;
 		}
-
+		public Jugador()
+		{
+			
+		}
+				
 		public boolean isBR() {
 			return BR;
 		}
@@ -225,17 +229,11 @@ public class Jugador
 		 }
 		 public void agregar(Carta c){
 				//m.setNroCartas(m.getNroCartas()+1);
-				m.aï¿½adir(c);
+				m.añadir(c);
 		 
 	 }
-	 //Rossie 3
-	 public void agregar(Carta c){
-		 m[m.nro]
-		 
-		 
-	 }
-
-			}
+	
+			
 		 public void primera(Mesa me)
 			{
 				Scanner in = new Scanner(System.in);
@@ -308,4 +306,8 @@ public class Jugador
 			{
 				m.ordenar(m.getCa(),m.getNroCartas() );
 			}
+		 public void mostrarp()
+		 {
+			 System.out.print(nombre+" "+puntuacion);
+		 }
 }

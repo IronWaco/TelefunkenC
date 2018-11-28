@@ -90,7 +90,7 @@ public class Juego {
 			{
 				System.out.println("que desea hacer");
 				System.out.println("1.bajar");
-				System.out.println("2.mostrar mesa");
+				System.out.println("2.mortrar mesa");
 				System.out.println("3.sopar");
 				System.out.println("4.Terminar turno");
 				op=sc.nextInt();
@@ -122,7 +122,7 @@ public class Juego {
 							ju[co].agregar(Nuevo.tomarCarta());
 						}
 						 else{
-							 System.out.println("Excedio el nï¿½mero de compras");				 
+							 System.out.println("Excedio el número de compras");				 
 						 }
 					}
 					orden =orden+1;
@@ -165,7 +165,7 @@ public class Juego {
 							ju[co].agregar(Nuevo.tomarCarta());
 						}
 						 else{
-							 System.out.println("Excedio el nï¿½mero de compras");				 
+							 System.out.println("Excedio el número de compras");				 
 						 }
 					}
 					orden =orden+1;
@@ -236,7 +236,7 @@ public class Juego {
 							ju[co].agregar(Nuevo.tomarCarta());
 						}
 						 else{
-							 System.out.println("Excedio el nï¿½mero de compras");				 
+							 System.out.println("Excedio el número de compras");				 
 						 }
 					}
 					orden =orden+1;
@@ -282,7 +282,7 @@ public class Juego {
 								ju[co].agregar(Nuevo.tomarCarta());
 							}
 							 else{
-								 System.out.println("Excedio el nï¿½mero de compras");				 
+								 System.out.println("Excedio el número de compras");				 
 							 }
 						}
 						if(ju[orden].getM().getNroCartas()>=1)
@@ -316,19 +316,4 @@ public class Juego {
 			System.out.println("jugador:"+ju[i].getNombre()+" Puntuacion:"+ju[i].getPuntuacion());
 		}
 	}
-	 //Rossie 3
-	 public void compras(){
-		 if(compras!=7){
-			 ju.setCompras()==ju.getCompras();
-			ju.Descarte.
-			 Descarte.tomarC();
-			 
-				 
-			 
-		 }
-		 else{
-			 System.out.println("Excedio el nï¿½mero de compras");
-			 
-		 }
-	 }
 }
