@@ -37,7 +37,7 @@ public class Mesa {
 		        int o, sw=0, swx=0;
 		        if(i==e)
 		        {
-		                if((Caux[1].getNombre().equals(Caux[2].getNombre()) && Caux[2].getNombre().equals(Caux[3].getNombre()) || 
+		        	 if((Caux[1].getNombre().equals(Caux[2].getNombre()) && Caux[2].getNombre().equals(Caux[3].getNombre()) || 
 		                        (Caux[1].getNombre().equals("Joker") && Caux[2].getNombre().equals(Caux[3].getNombre())) || 
 		                        (Caux[1].getNombre().equals(Caux[3].getNombre()) && Caux[2].getNombre().equals("JOker")) ||
 		                        (Caux[1].getNombre().equals(Caux[2].getNombre()) && Caux[3].getNombre().equals(""))) &&
